@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    background-color: #b32b34;
+    padding: 0 20px 0 5px;
+}
+
+.logo {
+    display: flex;
+    color: white;
+    font-size: 14px;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.logo img {
+    width: 12%;
+}
+
+.logo .texto {
+    align-self: center;
+    margin-left: 10px;
+} 
+
+.logo .texto a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.logo .texto span {
+    display: block;
+    font-size: 25px;
+}
+
+nav {
+    width: 50%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu li a {
+    padding: 19px 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.menu li a:hover {
+    color: #921c24;
+}
+
+.container {
+    display: flex;
+}
+
+.foto {
+    width: 37%;
+    align-self: center;
+}
+
+.foto img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #b32b34;
+}
+
+.content {
+    width: 63%;
+    padding: 30px 60px 30px 30px;
+}
+
+.content h3 {
+    margin: 10px 10px 20px 0;
+    font-size: 24px;
+}
+
+.content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+.footer {
+    background-color: #b32b34;
+    color: rgb(145, 137, 137);
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-top: 5px;
+}
+
+.social img {
+    width: 30px;
+    margin: 0px 20px;
+}
+
+.menuMobile {
+    display: none;
+}
+
+.botaoMenu {
+    display: none;
+}
+
+
+
+@media (max-width: 1000px){
+
+    .logo img {
+        width: 14%;
+    }
+
+    .menu li a {
+        padding: 19px 8px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .foto {
+        margin-top: 40px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 30px 50px;;
+    }
+}
+
+@media (max-width: 730px) {
+    
+    .logo .texto a {
+        font-size: 14px;
+    }
+
+    .logo .texto span {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 18%;
+    }
+
+    .menu li a {
+        font-size: 12px;
+    }
+
+    .content {
+        font-size: 14px;
+        padding: 30px;
+    }
+
+    .content h3 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    
+    .logo {
+        width: 150%;
+        justify-content: end;
+    }
+
+    .logo img {
+        width: 20%;
+    }
+
+    .logo .texto a {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .logo .texto span {
+        font-size: 18px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .botaoMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .botaoMenu:hover {
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .menuMobile {
+        display: block;
+        position: absolute;
+        top: 59px;
+        left: -100%;
+        width: 150px;
+        height: 100vh;
+        background-color: #b32b34;
+        transition: all 800ms ease;
+    }
+
+    .menuMobile ul li {
+        padding: 20px;
+    }
+    
+    .menuMobile ul li a {
+        color: white;
+        font-size: 14px;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .menuMobile ul li a:hover {
+        color: #921c24;
+    }
+    
+    .menuMobile.aberto {
+        left: 0%;
+    }
+
+    .hamburger {
+        display: block;
+        border-top: 2px solid white;
+        width: 20px;
+    }
+
+    .hamburger::after, .hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        margin-top: 5px;
+    }
+}
